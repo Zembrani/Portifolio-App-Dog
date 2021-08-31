@@ -7,6 +7,7 @@ export default class DefaultFrame extends Component {
       <div className="defaultFrame">
         <h1>{this.props.title}</h1>
         <div className="line"></div>
+        {this.props.children}
       </div>
     );
   }

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import DefaultFrame from "../defaultFrame/DefaultFrame";
+import DefaultFrame from "../defaultComponents/DefaultFrame";
 
 export default class Adoption extends Component {
   render() {

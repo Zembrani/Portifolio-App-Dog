@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import DefaultFrame from "../defaultFrame/DefaultFrame";
+import DefaultFrame from "../defaultComponents/DefaultFrame";
 
 export default class Find extends Component {
   render() {
-    return <DefaultFrame title="Encontre amigos para seu Doguinho"></DefaultFrame>;
+    return (
+      <DefaultFrame title="Encontre amigos para seu Doguinho"></DefaultFrame>
+    );
   }
 }
 // Nesta tela será possível pesquisar por outros dogs.
