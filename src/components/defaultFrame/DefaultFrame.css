@@ -1,0 +1,32 @@
+.defaultFrame {
+  margin: 0px 0px 0px 0px;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  top:0;
+  left: 60px;
+  position: absolute;
+  background-color: rgb(243, 247, 247);
+  background: linear-gradient(
+    90deg,
+    #fffbea 10%,
+    #fbf1c7 50%,
+    #f8e7a1 90%
+  );
+}
+
+.defaultFrame h1 {
+  padding-left: 10px;
+  margin-bottom: 0px;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.line {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    #ffd29d 10%,
+    #ffd29d 40%,
+    #ffd29d 92%
+  );
+}
