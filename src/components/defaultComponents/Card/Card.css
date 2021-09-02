@@ -1,17 +1,23 @@
 .Card-wrapper {
+  position: relative;
   background-color: #ffffff94;
-  margin: 10px;
   padding: 10px;
   width: 300px;
   height: 85px;
   border: 1px solid#f85e00;
   border-radius: 10px;
-  vertical-align: center;
+  margin-left: 12.5px;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 1);
+  -webkit-transition-duration: 0.5s;
+}
+.Card-wrapper:not(:first-of-type) {
+  margin-top: 10px;
 }
 
 .Card-wrapper:hover {
   border: 1px solid #f84f00;
   background-color: #ffffff;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
 }
 
 .flex {
@@ -45,4 +51,31 @@
   border-radius: 50%;
   border: 1px solid #f85e00;
   margin-right: 5px;
+}
+
+.Cardbuttons {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+}
+
+.fa {
+  font-size: 15px;
+  width: 40px;
+  height: 30px;
+}
+
+.Cardbuttons i:hover {
+  background-color: rgb(253, 242, 207);
+  border-radius: 20%;
+}
+
+.Cardbuttons i:active {
+  background-color: rgb(250, 207, 137);
+  border-radius: 20%;
+}
+
+.Cardbuttons i.fa-eraser:active {
+  background-color: rgb(255, 74, 67);
+  border-radius: 20%;
 }

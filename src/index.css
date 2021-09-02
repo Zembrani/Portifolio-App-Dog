@@ -1,9 +1,6 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css);
+
 :root {
-  /* height: 100%;
-  width: 100%;
-  margin: 0px;
-  bottom: 0;
-  top:0; */
   --RubyRed: #a41623;
   --OrangePantone: #f85e00;
   --Rajah: #ffb563;
@@ -13,10 +10,4 @@
 
 body {
   overflow: hidden;
-  /* height: 100%;
-  width: 100%;
-  margin: 0px;
-  padding: 0px;
-  top:0;
-  bottom: 0; */
 }

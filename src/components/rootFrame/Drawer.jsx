@@ -22,19 +22,25 @@ export default class Drawer extends Component {
         id: 1,
         title: "Meus Dogs",
         url: "/dogs",
-        icon: "fa-solid fa-user",
+        icon: "fa-solid fa-paw",
       },
       {
         id: 2,
         title: "Encontre Dogs",
         url: "/find",
-        icon: "fa-solid fa-users",
+        icon: "fa-solid fa-compass",
       },
       {
         id: 3,
         title: "Adote seu Dog",
         url: "/adoption",
-        icon: "fa-solid fa-tasks",
+        icon: "fa-solid fa-heart",
+      },
+      {
+        id: 4,
+        title: "Adote seu Dog",
+        url: "/adoption",
+        icon: "fa-solid fa-sort-alpha-asc",
       },
     ];
 

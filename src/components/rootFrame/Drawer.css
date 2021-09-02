@@ -1,7 +1,5 @@
 @import "../../index.css";
 
-@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
-
 .fa-2x {
   font-size: 2em;
 }
@@ -25,12 +23,7 @@ nav.main-menu.expanded {
 
 .main-menu {
   background: #212121;
-  background: linear-gradient(
-    90deg,
-    #f8c489 0%,
-    #ffd19ded 70%,
-    #ffd19dd7 100%
-  );
+  background: linear-gradient(90deg, #f8c489 0%, #ffd19ded 70%, #ffd19dd7 100%);
   border-right: 1px solid #e5e5e5;
   position: absolute;
   top: 0;

@@ -1,0 +1,39 @@
+.List-wrapper {
+  margin: 10px 0px 0px 10px;
+  padding: 10px;
+  width: 350px;
+  border-right: 1px solid
+    linear-gradient(0deg, #dfdfdf 10%, #7a7a7a 40%, #0f0f0f 92%);
+}
+
+.List {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.List li {
+  align-items: center;
+}
+
+.List li:not(:first-of-type) {
+  margin-top: 10px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.buttons div {
+  background: none;
+  border: none;
+  border-radius: 20%;
+}
+
+.buttons div:hover {
+  background: rgb(255, 232, 189);
+}
+
+.buttons div:active {
+  background: rgb(255, 219, 152);
+}
