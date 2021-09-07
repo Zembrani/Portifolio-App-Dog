@@ -11,3 +11,9 @@
 body {
   overflow: hidden;
 }
+
+button {
+  background: none;
+  border: none;
+  border-radius: 20%;
+}
