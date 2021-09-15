@@ -41,6 +41,8 @@ export default class Card extends Component {
           title={this.props.name}
           breed={this.props.breed}
           age={this.props.age}
+          dog={this.props.dog}
+          callback={this.props.editCallback}
         ></Modal>
       </div>
     );

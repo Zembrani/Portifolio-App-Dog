@@ -36,12 +36,6 @@ export default class Drawer extends Component {
         url: "/adoption",
         icon: "fa-solid fa-heart",
       },
-      {
-        id: 4,
-        title: "Adote seu Dog",
-        url: "/adoption",
-        icon: "fa-solid fa-sort-alpha-asc",
-      },
     ];
 
     const userSession = (

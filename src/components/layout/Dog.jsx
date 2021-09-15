@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, setState } from "react";
 import DefaultFrame from "../defaultComponents/DefaultFrame";
 import Card from "../defaultComponents/Card/Card";
 import List from "../defaultComponents/List/List";
@@ -6,8 +6,17 @@ import kako from "../../images/kako.jpg";
 import vivi from "../../images/vivi.jpg";
 
 export default class Dog extends Component {
-  render() {
-    const myDogsList = [
+  constructor(props) {
+    super(props);
+    this.state = { dogs: [] };
+  }
+
+  componentDidMount() {
+    this.initialValue();
+  }
+
+  initialValue = () => {
+    const initialValues = [
       {
         id: 1,
         photo: kako,
@@ -33,21 +42,31 @@ export default class Dog extends Component {
         age: "5",
       },
     ];
+    this.setState({ dogs: initialValues });
+  };
 
-    const myDogsListCard = myDogsList.map(
-      ({ id, photo, name, breed, weight, age }) => (
-        <Card
-          id={id}
-          photo={photo}
-          name={name}
-          breed={breed}
-          weight={weight}
-          age={age}
-        />
-      )
+  updateValue = (newValue) => {
+    const values = this.state;
+    values.map((value) => {
+      if (value.id === newValue.id) {
+        value = newValue;
+      }
+      return value;
+    });
+    this.setState({ dogs: values });
+  };
+
+  addValue = (newValue) => {
+    const values = this.state;
+    values.push(newValue);
+    this.setState({ dogs: values });
+  };
+
+  render() {
+    const myDogsList = this.state.dogs;
+    const myDogsListFrame = (
+      <List values={this.state.dogs} callback={this.updateValue}></List>
     );
-
-    const myDogsListFrame = <List value={myDogsList}></List>;
     return (
       <DefaultFrame title="Seus Doguinhos">{myDogsListFrame}</DefaultFrame>
     );

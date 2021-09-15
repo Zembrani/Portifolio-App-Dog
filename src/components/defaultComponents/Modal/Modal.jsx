@@ -27,7 +27,7 @@ const Modal = (props) => {
         <div className="modal-content" onClick={(e) => e.stopPropagation()}>
           <div className="modal-header">{props.title}</div>
           <div className="modal-body">
-            <FormAddDog breed={props.breed} age={props.age}></FormAddDog>
+            <FormAddDog dog={props.dog} callback={props.callback}></FormAddDog>
           </div>
           <div className="modal-footer">
             <button className="button" onClick={props.onClose}>

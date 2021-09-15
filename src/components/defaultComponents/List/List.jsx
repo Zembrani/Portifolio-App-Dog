@@ -15,14 +15,17 @@ export default function List(props) {
         </div>
       </div>
       <ul className="List">
-        {props.value.map(({ id, photo, name, breed, weight, age }) => (
-          <li key={id}>
+        {props.values.map((value) => (
+          <li key={value.id}>
             <Card
-              photo={photo}
-              name={name}
-              breed={breed}
-              weight={weight}
-              age={age}
+              photo={value.photo}
+              name={value.name}
+              breed={value.breed}
+              weight={value.weight}
+              age={value.age}
+              dog={value}
+              editCallback={props.callback}
+              deleteCallback={null}
             />
           </li>
         ))}
