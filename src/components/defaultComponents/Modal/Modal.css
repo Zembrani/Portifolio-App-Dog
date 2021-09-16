@@ -14,14 +14,55 @@
 .modal-content {
   width: 300px;
   background-color: indianred;
+  border-radius: 10px;
+  border: 1px solid #f85e00;
+  box-shadow: 0px 0px 3px #3d3d3d;
 }
 
 .modal-header,
 .modal-footer {
   padding: 10px;
   background-color: #ececec;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 
+.modal-header {
+  border-radius: 10px 10px 0px 0px;
+  font-size: 1.2em;
+}
+
+.modal-footer {
+  border-radius: 0px 0px 10px 10px;
+}
+
+.modal-footer .button {
+  background-color: rgba(255, 0, 0, 0.739);
+  height: 30px;
+  width: 60px;
+  border-radius: 10px;
+}
+
+.modal-footer .close:hover {
+  background-color: #ff0000ec;
+}
+
+.modal-footer .close:active {
+  background-color: #ee0202;
+}
+
+.modal-footer .save {
+  background-color: #00b40f9f;
+  margin-left: 160px;
+}
+
+.modal-footer .save:hover {
+  background-color: #00b40fce;
+}
+
+.modal-footer .save:active {
+  background-color: #00b40fec;
+}
 .modal-title {
   margin: 0;
 }

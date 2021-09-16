@@ -66,16 +66,16 @@
 }
 
 .Cardbuttons button:hover {
-  background-color: rgb(253, 242, 207);
+  background-color: #fdf2cf;
   border-radius: 20%;
 }
 
 .Cardbuttons button:active {
-  background-color: rgb(250, 207, 137);
+  background-color: #facf89;
   border-radius: 20%;
 }
 
 .Cardbuttons button.fa-eraser:active {
-  background-color: rgb(255, 74, 67);
+  background-color: #ff4a43;
   border-radius: 20%;
 }

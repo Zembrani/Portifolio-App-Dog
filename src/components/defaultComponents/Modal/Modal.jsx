@@ -1,10 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
-import FormAddDog from "../FormAddDog/FormAddDog";
+import FormAddDog, { handleSubmit } from "../FormAddDog/FormAddDog";
 
 import "./Modal.css";
 
 const Modal = (props) => {
+  const refForm = useRef();
+
   const closeOnEscapeKeyDown = (e) => {
     if ((e.charCode || e.keyCode) === 27) {
       props.onClose();
@@ -27,11 +29,17 @@ const Modal = (props) => {
         <div className="modal-content" onClick={(e) => e.stopPropagation()}>
           <div className="modal-header">{props.title}</div>
           <div className="modal-body">
-            <FormAddDog dog={props.dog} callback={props.callback}></FormAddDog>
+            <FormAddDog dog={props.dog} ref={refForm}></FormAddDog>
           </div>
           <div className="modal-footer">
-            <button className="button" onClick={props.onClose}>
-              close
+            <button className="button close" onClick={props.onClose}>
+              Fechar
+            </button>
+            <button
+              className="button save"
+              onClick={() => refForm.current.handleSubmit(props.callback)}
+            >
+              Salvar
             </button>
           </div>
         </div>

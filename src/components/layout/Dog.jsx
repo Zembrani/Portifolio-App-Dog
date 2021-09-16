@@ -46,14 +46,16 @@ export default class Dog extends Component {
   };
 
   updateValue = (newValue) => {
-    const values = this.state;
-    values.map((value) => {
+    console.log(newValue);
+
+    const values = this.state.dogs;
+    const newValues = values.map((value) => {
       if (value.id === newValue.id) {
-        value = newValue;
+        return newValue;
       }
       return value;
     });
-    this.setState({ dogs: values });
+    this.setState({ dogs: newValues });
   };
 
   addValue = (newValue) => {

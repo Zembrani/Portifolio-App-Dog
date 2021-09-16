@@ -7,6 +7,8 @@ Projeto feito em React.
 
 No momento está assim:
 
+Feito os menus para navegação, porém somente já tem conteúdo. Neste menu, existe uma lista de aminais cadastrados e é possível editá-los.
+
 <details><summary>Imagens</summary>
 
 ![image](https://user-images.githubusercontent.com/32707094/132272813-84dd137f-b0bd-4687-893a-8e9e3457dfcb.png)
