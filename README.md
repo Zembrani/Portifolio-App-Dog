@@ -15,6 +15,15 @@ Feito os menus para navegação, porém somente já tem conteúdo. Neste menu, e
 
 ![cards](https://user-images.githubusercontent.com/32707094/132272746-53332a1b-62b1-44cf-840f-224cb04fa6b1.png)
 
+  Modal para edição dos registros
+  
+![image](https://user-images.githubusercontent.com/32707094/133537732-4d759844-b243-4c68-82d3-05aa71b3ec92.png)
+  
+  Após clicar em salvar
+  
+![image](https://user-images.githubusercontent.com/32707094/133537807-37cd6710-1196-4bd7-ad4f-afd98f778e97.png)
+
+
 </details>
 
 Promessas:
