@@ -1,6 +1,5 @@
-import React, { Component, setState } from "react";
+import React, { Component } from "react";
 import DefaultFrame from "../defaultComponents/DefaultFrame";
-import Card from "../defaultComponents/Card/Card";
 import List from "../defaultComponents/List/List";
 import kako from "../../images/kako.jpg";
 import vivi from "../../images/vivi.jpg";
@@ -46,8 +45,6 @@ export default class Dog extends Component {
   };
 
   updateValue = (newValue) => {
-    console.log(newValue);
-
     const values = this.state.dogs;
     const newValues = values.map((value) => {
       if (value.id === newValue.id) {
@@ -59,15 +56,25 @@ export default class Dog extends Component {
   };
 
   addValue = (newValue) => {
-    const values = this.state;
+    const values = this.state.dogs;
     values.push(newValue);
     this.setState({ dogs: values });
   };
 
+  removeValue = (toRemove) => {
+    const values = this.state.dogs;
+    const newValues = values.filter((value) => value.id !== toRemove);
+    this.setState({ dogs: newValues });
+  };
+
   render() {
-    const myDogsList = this.state.dogs;
     const myDogsListFrame = (
-      <List values={this.state.dogs} callback={this.updateValue}></List>
+      <List
+        values={this.state.dogs}
+        callbackAdd={this.addValue}
+        callbackEdit={this.updateValue}
+        callbackRemove={this.removeValue}
+      ></List>
     );
     return (
       <DefaultFrame title="Seus Doguinhos">{myDogsListFrame}</DefaultFrame>

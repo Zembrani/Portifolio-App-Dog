@@ -1,13 +1,16 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 
 import Modal from "../Modal/Modal";
+import ModalRemove from "../Modal/ModalRemove/ModalRemove";
+import defaultAvatar from "../../../images/default.jpg";
 import "./Card.css";
 
 export default class Card extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      show: false,
+      showEdit: false,
+      showRemove: false,
     };
   }
 
@@ -16,17 +19,21 @@ export default class Card extends Component {
       <div className="Card-wrapper">
         <div>
           <span className="photo">
-            <img src={this.props.photo} alt="Perfil" className="avatar" />
+            <img
+              src={this.props.photo || defaultAvatar}
+              alt="Perfil"
+              className="avatar"
+            />
           </span>
           <span className="item">{this.props.name}</span>
           <span className="Cardbuttons">
             <button
               className="fa fa-thin fa-eraser"
-              onClick={() => this.setState({ show: true })}
+              onClick={() => this.setState({ showRemove: true })}
             ></button>
             <button
               className="fa fa-thin fa-edit"
-              onClick={() => this.setState({ show: true })}
+              onClick={() => this.setState({ showEdit: true })}
             ></button>
           </span>
         </div>
@@ -36,14 +43,18 @@ export default class Card extends Component {
           <div className="item">{this.props.age} anos</div>
         </div>
         <Modal
-          show={this.state.show}
-          onClose={() => this.setState({ show: false })}
+          show={this.state.showEdit}
+          onClose={() => this.setState({ showEdit: false })}
           title={this.props.name}
-          breed={this.props.breed}
-          age={this.props.age}
           dog={this.props.dog}
-          callback={this.props.editCallback}
-        ></Modal>
+          callback={this.props.callbackEdit}
+        />
+        <ModalRemove
+          show={this.state.showRemove}
+          onClose={() => this.setState({ showRemove: false })}
+          id={this.props.id}
+          callback={this.props.callbackRemove}
+        />
       </div>
     );
   }

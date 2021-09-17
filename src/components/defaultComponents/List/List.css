@@ -21,19 +21,24 @@
 
 .buttons {
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: space-between;
 }
 
-.buttons div {
+.buttons .fa {
   background: none;
   border: none;
   border-radius: 20%;
 }
 
-.buttons div:hover {
+.buttons .fa:hover {
   background: rgb(255, 232, 189);
 }
 
-.buttons div:active {
+.buttons .fa:active {
   background: rgb(255, 219, 152);
+}
+
+.buttons .list-config {
+  display: flex;
+  flex-direction: row;
 }

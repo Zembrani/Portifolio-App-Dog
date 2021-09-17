@@ -1,19 +1,16 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 
-import FormAddDog from "../FormAddDog/FormAddDog";
+import "../Modal.css";
 
-import "./Modal.css";
-
-const Modal = (props) => {
-  const refForm = useRef();
+const ModalRemove = (props) => {
   const closeOnEscapeKeyDown = (e) => {
     if ((e.charCode || e.keyCode) === 27) {
       props.onClose();
     }
   };
 
-  const save = () => {
-    refForm.current.handleSubmit(props.callback);
+  const remove = () => {
+    props.callback(props.id);
     props.onClose();
   };
 
@@ -31,16 +28,13 @@ const Modal = (props) => {
     <div>
       <div className="modal" onClick={props.onClose}>
         <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-          <div className="modal-header">{props.title}</div>
-          <div className="modal-body">
-            <FormAddDog dog={props.dog} ref={refForm}></FormAddDog>
-          </div>
+          <div className="modal-header">Excluir registro?</div>
           <div className="modal-footer">
             <button className="button close" onClick={props.onClose}>
-              Fechar
+              Cancelar
             </button>
-            <button className="button save" onClick={save}>
-              Salvar
+            <button className="button save" onClick={remove}>
+              Excluir
             </button>
           </div>
         </div>
@@ -49,4 +43,4 @@ const Modal = (props) => {
   );
 };
 
-export default Modal;
+export default ModalRemove;

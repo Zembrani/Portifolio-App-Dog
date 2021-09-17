@@ -4,8 +4,19 @@ import "./FormDog.css";
 export default class FormAddDog extends Component {
   constructor(props) {
     super(props);
-    this.state = props.dog;
+    this.state = props.dog || this.initialState();
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  initialState() {
+    return {
+      name: null,
+      age: null,
+      breed: null,
+      weight: null,
+      photo: null,
+      id: null,
+    };
   }
 
   handleSubmit = (callback) => {
